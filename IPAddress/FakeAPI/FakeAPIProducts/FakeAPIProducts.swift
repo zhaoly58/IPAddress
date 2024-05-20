@@ -47,12 +47,13 @@ struct ProductListView: View {
     var body: some View {
         //NavigationView {
             List(viewModel.products) { product in
-                ProductRowView(product: product)
+                NavigationLink(destination: FakeAPIProductsDetails(oneProduct: product)) {
+                    ProductRowView(product: product)
+                }
             }
             //.navigationTitle("Products")
-            //}
-        }
-    
+        
+    }
 }
 
 
@@ -84,8 +85,7 @@ struct ProductRowView: View {
 }
 
 
-
-
 #Preview {
     ProductListView()
 }
+

@@ -17,15 +17,18 @@ struct FakeAPIProductsDetails: View {
                 KFImage(URL(string: oneProduct.image))
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: 300)
+                    .frame(width: 200, height: 200)
                     .padding()
                 
                 Text(oneProduct.title)
                     .font(.title)
                     .padding(.bottom, 10)
                 
+                Text("Category: \(oneProduct.category)")
+                    .padding(.bottom, 10)
+                
                 Text(String(format: "$%.2f", oneProduct.price))
-                    .font(.title2)
+                    .font(.title)
                     .padding(.bottom, 10)
                 
                 Text("Rating: \(String(oneProduct.rating.rate)) (\(oneProduct.rating.count) reviews)")

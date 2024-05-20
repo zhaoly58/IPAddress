@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FakeAPIUser: View {
+struct FakeAPIUserView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             Text("Hello, Users!")
@@ -16,5 +16,5 @@ struct FakeAPIUser: View {
 }
 
 #Preview {
-    FakeAPIUser()
+    FakeAPIUserView()
 }

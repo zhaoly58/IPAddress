@@ -18,7 +18,6 @@
 		420F25A72BFB34F0006B93F2 /* FakeAPIDataModelCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F25A62BFB34F0006B93F2 /* FakeAPIDataModelCart.swift */; };
 		420F25AA2BFB3A9F006B93F2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 420F25A92BFB3A9F006B93F2 /* Kingfisher */; };
 		420F25AD2BFB842D006B93F2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 420F25AC2BFB842D006B93F2 /* Alamofire */; };
-		420F25AF2BFB842D006B93F2 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 420F25AE2BFB842D006B93F2 /* AlamofireDynamic */; };
 		4275B33A2BF0F7B70083AA94 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4275B3392BF0F7B70083AA94 /* URLImage */; };
 		4275B33C2BF0F7BC0083AA94 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 4275B33B2BF0F7BC0083AA94 /* SwiftSVG */; };
 		428B5AD02BF1E86E008B22D2 /* FakeAPIMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B5ACF2BF1E86E008B22D2 /* FakeAPIMain.swift */; };
@@ -84,7 +83,6 @@
 			files = (
 				420F25AA2BFB3A9F006B93F2 /* Kingfisher in Frameworks */,
 				420F25AD2BFB842D006B93F2 /* Alamofire in Frameworks */,
-				420F25AF2BFB842D006B93F2 /* AlamofireDynamic in Frameworks */,
 				4275B33A2BF0F7B70083AA94 /* URLImage in Frameworks */,
 				4275B33C2BF0F7BC0083AA94 /* SwiftSVG in Frameworks */,
 			);
@@ -245,7 +243,6 @@
 				4275B33B2BF0F7BC0083AA94 /* SwiftSVG */,
 				420F25A92BFB3A9F006B93F2 /* Kingfisher */,
 				420F25AC2BFB842D006B93F2 /* Alamofire */,
-				420F25AE2BFB842D006B93F2 /* AlamofireDynamic */,
 			);
 			productName = IPAddress;
 			productReference = 420E78042BEB3D9500C92968 /* IPAddress.app */;
@@ -470,7 +467,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -527,7 +524,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -558,7 +555,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.IPAddress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -588,7 +585,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.IPAddress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -759,11 +756,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 420F25AB2BFB842C006B93F2 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		420F25AE2BFB842D006B93F2 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 420F25AB2BFB842C006B93F2 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 		4275B3392BF0F7B70083AA94 /* URLImage */ = {
 			isa = XCSwiftPackageProductDependency;

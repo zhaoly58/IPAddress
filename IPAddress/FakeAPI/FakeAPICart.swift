@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FakeAPICart: View {
+struct FakeAPICartView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             Text("Hello, Cart!")
@@ -16,5 +16,5 @@ struct FakeAPICart: View {
 }
 
 #Preview {
-    FakeAPICart()
+    FakeAPICartView()
 }

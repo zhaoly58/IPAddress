@@ -46,7 +46,6 @@ struct ProductListView: View {
     
     var body: some View {
         //NavigationView {
-        
             List(viewModel.products) { product in
                 ProductRowView(product: product)
             }
@@ -63,24 +62,24 @@ struct ProductRowView: View {
     let product: FakeAPIProduct
     
     var body: some View {
-        HStack {
-            KFImage(URL(string: product.image))
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
-//                .placeholder {
-//                    ProgressView()
-//                }
-            VStack(alignment: .leading) {
-                Text(product.title)
-                    .font(.headline)
-                Text(String(format: "$%.2f", product.price))
-                    .font(.subheadline)
-                Text("Rating: \(product.rating.rate) (\(product.rating.count) reviews)")
-                    .font(.subheadline)
+            HStack {
+                KFImage(URL(string: product.image))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 50, height: 50)
+                
+                VStack(alignment: .leading) {
+                    Text(product.title)
+                        .font(.headline)
+                    Text(String(format: "$%.2f", product.price))
+                        .font(.subheadline)
+                    
+                    Text("Rating: \(String(product.rating.rate)) (\(product.rating.count) reviews)")
+                        .font(.subheadline)
+                }
+                
             }
-        }
-        .padding()
+            .padding()
     }
 }
 

@@ -87,7 +87,7 @@ struct FakeAPIViewMain: View {
                     if selectedTab == 0 {
                         ProductListView()
                     } else if selectedTab == 1 {
-                        FakeAPICartView()
+                        CartListView()
                     } else if selectedTab == 2 {
                         FakeAPIUserView()
                     }

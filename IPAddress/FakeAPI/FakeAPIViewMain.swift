@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FakeAPIMain: View {
+struct FakeAPIViewMain: View {
     @State private var selectedTab = 0
 
     let gradientColors = [
@@ -101,6 +101,6 @@ struct FakeAPIMain: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        FakeAPIMain()
+        FakeAPIViewMain()
     }
 }

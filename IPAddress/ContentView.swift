@@ -24,7 +24,7 @@ struct ContentView: View {
                 
                 
                 // Ping tab
-                FakeAPIMain()
+                FakeAPIViewMain()
                     .navigationTitle("Fake API")
                     .tabItem {
                         Image(systemName: "network")

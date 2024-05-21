@@ -21,7 +21,7 @@
 		420F25B32BFB9831006B93F2 /* FakeAPIProductsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F25B22BFB9831006B93F2 /* FakeAPIProductsDetails.swift */; };
 		4275B33A2BF0F7B70083AA94 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4275B3392BF0F7B70083AA94 /* URLImage */; };
 		4275B33C2BF0F7BC0083AA94 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 4275B33B2BF0F7BC0083AA94 /* SwiftSVG */; };
-		428B5AD02BF1E86E008B22D2 /* FakeAPIMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B5ACF2BF1E86E008B22D2 /* FakeAPIMain.swift */; };
+		428B5AD02BF1E86E008B22D2 /* FakeAPIViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B5ACF2BF1E86E008B22D2 /* FakeAPIViewMain.swift */; };
 		428B5AD22BF1E8D1008B22D2 /* FakeAPIProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B5AD12BF1E8D1008B22D2 /* FakeAPIProducts.swift */; };
 		428B5AD42BF1E9AF008B22D2 /* FakeAPICart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B5AD32BF1E9AF008B22D2 /* FakeAPICart.swift */; };
 		428B5AD62BF1E9CB008B22D2 /* FakeAPIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B5AD52BF1E9CB008B22D2 /* FakeAPIUser.swift */; };
@@ -65,7 +65,7 @@
 		420E78342BEB425700C92968 /* dataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataModel.swift; sourceTree = "<group>"; };
 		420F25A62BFB34F0006B93F2 /* FakeAPIDataModelCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIDataModelCart.swift; sourceTree = "<group>"; };
 		420F25B22BFB9831006B93F2 /* FakeAPIProductsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIProductsDetails.swift; sourceTree = "<group>"; };
-		428B5ACF2BF1E86E008B22D2 /* FakeAPIMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIMain.swift; sourceTree = "<group>"; };
+		428B5ACF2BF1E86E008B22D2 /* FakeAPIViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIViewMain.swift; sourceTree = "<group>"; };
 		428B5AD12BF1E8D1008B22D2 /* FakeAPIProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIProducts.swift; sourceTree = "<group>"; };
 		428B5AD32BF1E9AF008B22D2 /* FakeAPICart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPICart.swift; sourceTree = "<group>"; };
 		428B5AD52BF1E9CB008B22D2 /* FakeAPIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIUser.swift; sourceTree = "<group>"; };
@@ -184,6 +184,22 @@
 			path = FakeAPIProducts;
 			sourceTree = "<group>";
 		};
+		420F25B42BFC1DD0006B93F2 /* FakeAPICart */ = {
+			isa = PBXGroup;
+			children = (
+				428B5AD32BF1E9AF008B22D2 /* FakeAPICart.swift */,
+			);
+			path = FakeAPICart;
+			sourceTree = "<group>";
+		};
+		420F25B52BFC1DEB006B93F2 /* FakeAPIUser */ = {
+			isa = PBXGroup;
+			children = (
+				428B5AD52BF1E9CB008B22D2 /* FakeAPIUser.swift */,
+			);
+			path = FakeAPIUser;
+			sourceTree = "<group>";
+		};
 		4275B3382BF0F7B70083AA94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,11 +210,11 @@
 		428B5ACC2BF1E7AC008B22D2 /* FakeAPI */ = {
 			isa = PBXGroup;
 			children = (
+				420F25B52BFC1DEB006B93F2 /* FakeAPIUser */,
+				428B5ACF2BF1E86E008B22D2 /* FakeAPIViewMain.swift */,
+				420F25B42BFC1DD0006B93F2 /* FakeAPICart */,
 				420F25B12BFB97FE006B93F2 /* FakeAPIProducts */,
 				42DCC4ED2BFB0CA500349759 /* DataModel */,
-				428B5ACF2BF1E86E008B22D2 /* FakeAPIMain.swift */,
-				428B5AD32BF1E9AF008B22D2 /* FakeAPICart.swift */,
-				428B5AD52BF1E9CB008B22D2 /* FakeAPIUser.swift */,
 				428B5AD72BF1EA2F008B22D2 /* FakeAPIEndpoints.swift */,
 			);
 			path = FakeAPI;
@@ -380,7 +396,7 @@
 				420F25B32BFB9831006B93F2 /* FakeAPIProductsDetails.swift in Sources */,
 				428B5AD62BF1E9CB008B22D2 /* FakeAPIUser.swift in Sources */,
 				42CC4A332BF097E700343944 /* MyOwnIPAddress.swift in Sources */,
-				428B5AD02BF1E86E008B22D2 /* FakeAPIMain.swift in Sources */,
+				428B5AD02BF1E86E008B22D2 /* FakeAPIViewMain.swift in Sources */,
 				420E780A2BEB3D9500C92968 /* ContentView.swift in Sources */,
 				428B5AD82BF1EA2F008B22D2 /* FakeAPIEndpoints.swift in Sources */,
 				42DCC4EF2BFB0CBA00349759 /* FakeAPIDataModel.swift in Sources */,

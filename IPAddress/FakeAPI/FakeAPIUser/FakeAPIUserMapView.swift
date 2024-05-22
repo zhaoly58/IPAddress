@@ -53,12 +53,12 @@ struct MapView: View {
     var body: some View {
         Map(coordinateRegion: .constant(MKCoordinateRegion(
             center: coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
         )))
     }
 }
 
 
 #Preview {
-    MapView(coordinate: CLLocationCoordinate2D(latitude: 10.3456, longitude: 20.6419))
+    MapView(coordinate: CLLocationCoordinate2D(latitude: 59.3456, longitude: 34.6419))
 }

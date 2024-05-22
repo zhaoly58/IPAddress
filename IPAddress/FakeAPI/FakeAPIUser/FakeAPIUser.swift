@@ -84,6 +84,14 @@ struct UserRowView: View {
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
+                
+                Spacer()
+                
+                VStack{
+                    MapView(coordinate: user.address.geolocation.locationCoordinate)
+                        .frame(width: 60, height: 60)
+                        .cornerRadius(10)
+                }
 //                Spacer()
 //                MapView(coordinate: user.address.geolocation.locationCoordinate)
 //                    .frame(width: 100, height: 100)

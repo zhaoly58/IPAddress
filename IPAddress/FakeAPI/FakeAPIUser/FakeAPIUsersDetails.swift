@@ -19,6 +19,12 @@ struct FakeAPIUsersDetails: View {
                 Text("Phone: \(oneUser.phone)")
                 Text("Address: \(oneUser.address.street), \(oneUser.address.city), \(oneUser.address.zipcode)")
                 Text("Geolocation: Lat \(oneUser.address.geolocation.lat), Long \(oneUser.address.geolocation.long)")
+                
+                VStack{
+                    MapView(coordinate: oneUser.address.geolocation.locationCoordinate)
+                        .frame(width: 200, height: 200)
+                        .cornerRadius(10)
+                }
             }
             .padding()
             

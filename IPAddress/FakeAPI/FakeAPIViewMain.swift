@@ -89,7 +89,7 @@ struct FakeAPIViewMain: View {
                     } else if selectedTab == 1 {
                         CartListView()
                     } else if selectedTab == 2 {
-                        FakeAPIUserView()
+                        UserListView()
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -19,10 +19,10 @@ struct FakeAPICartsDetails: View {
                     .font(.title)
                     .padding(.bottom, 10)
                 
-                Text("Category: \(oneCart.userID)")
+                Text("Cart User ID: \(oneCart.userID)")
                     .padding(.bottom, 10)
                 
-                Text("Products: \(oneCart.products)")
+                Text("Cart Products: \(oneCart.products)")
                     .padding(.bottom, 10)
                 
             }

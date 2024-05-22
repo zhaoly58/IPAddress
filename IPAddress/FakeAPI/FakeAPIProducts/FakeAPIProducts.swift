@@ -52,7 +52,6 @@ struct ProductListView: View {
                 }
             }
             //.navigationTitle("Products")
-        
     }
 }
 

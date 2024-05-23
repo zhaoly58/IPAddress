@@ -49,7 +49,8 @@ class UserViewModel: ObservableObject {
 
 
 struct UserListView: View {
-    @StateObject private var viewModel = UserViewModel()
+    //@StateObject private var viewModel = UserViewModel()
+    @EnvironmentObject var viewModel: UserViewModel
 
     var body: some View {
 //        NavigationView {
@@ -106,5 +107,6 @@ struct UserRowView: View {
 
 #Preview {
     UserListView()
+        .environmentObject(UserViewModel())
 }
 

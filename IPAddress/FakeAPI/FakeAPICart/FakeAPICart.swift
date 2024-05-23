@@ -43,7 +43,8 @@ class CartViewModel: ObservableObject {
 
 
 struct CartListView: View {
-    @StateObject private var viewModel = CartViewModel()
+    //@StateObject private var viewModel = CartViewModel()
+    @EnvironmentObject var viewModel: CartViewModel
     
     var body: some View {
         //NavigationView {
@@ -51,6 +52,9 @@ struct CartListView: View {
                 NavigationLink(destination: FakeAPICartsDetails(oneCart: cart)) {
                     CartRowView(cart: cart)
                 }
+            }
+            .onAppear {
+                viewModel.fetchCarts()
             }
             //.navigationTitle("Products")
         
@@ -85,5 +89,6 @@ struct CartRowView: View {
 
 #Preview {
     CartListView()
+        .environmentObject(CartViewModel())
 }
 

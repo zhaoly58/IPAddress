@@ -9,6 +9,10 @@ import SwiftUI
 
 struct FakeAPIViewMain: View {
     @State private var selectedTab = 0
+    
+    @StateObject private var productViewModel = ProductViewModel()
+    @StateObject private var cartViewModel = CartViewModel()
+    @StateObject private var userViewModel = UserViewModel()
 
     let gradientColors = [
         UIColor(red: 0.00, green: 0.27, blue: 0.58, alpha: 1.00).cgColor,
@@ -86,10 +90,13 @@ struct FakeAPIViewMain: View {
                 VStack {
                     if selectedTab == 0 {
                         ProductListView()
+                            .environmentObject(productViewModel)
                     } else if selectedTab == 1 {
                         CartListView()
+                            .environmentObject(cartViewModel)
                     } else if selectedTab == 2 {
                         UserListView()
+                            .environmentObject(userViewModel)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

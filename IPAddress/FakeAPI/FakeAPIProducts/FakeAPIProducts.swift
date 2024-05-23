@@ -42,7 +42,8 @@ class ProductViewModel: ObservableObject {
 
 
 struct ProductListView: View {
-    @StateObject private var viewModel = ProductViewModel()
+    //@StateObject private var viewModel = ProductViewModel()
+    @EnvironmentObject var viewModel: ProductViewModel
     
     var body: some View {
         //NavigationView {
@@ -51,6 +52,9 @@ struct ProductListView: View {
                     ProductRowView(product: product)
                 }
             }
+            .onAppear {
+                        viewModel.fetchProducts()
+                    }
             //.navigationTitle("Products")
     }
 }
@@ -86,5 +90,6 @@ struct ProductRowView: View {
 
 #Preview {
     ProductListView()
+        .environmentObject(ProductViewModel())
 }
 

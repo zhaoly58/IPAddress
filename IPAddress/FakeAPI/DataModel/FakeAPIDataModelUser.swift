@@ -44,6 +44,8 @@ struct Name: Codable {
     let firstname, lastname: String
 }
 
-typealias FakeAPIUsers = [FakeAPIModelUser]
+
+
+//typealias FakeAPIUsers = [FakeAPIModelUser]
 
 

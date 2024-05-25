@@ -4,14 +4,14 @@ import Foundation
 
 func getPublicIPAddress(completion: @escaping (String?) -> Void) {
     let url = URL(string: "https://api.ipify.org")!
-
+    
     let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
         if error != nil {
             print("Error fetching IP address: (error)")
             completion(nil)
             return
         }
-
+        
         if let data = data, let publicIP = String(data: data, encoding: .utf8)?.trimmingCharacters(in: .whitespacesAndNewlines) {
             completion(publicIP)
         } else {
@@ -19,7 +19,7 @@ func getPublicIPAddress(completion: @escaping (String?) -> Void) {
             completion(nil)
         }
     }
-
+    
     task.resume()
 }
 

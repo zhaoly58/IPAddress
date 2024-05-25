@@ -14,7 +14,7 @@ struct FakeAPIModelCart: Codable, Identifiable {
     let date: String
     let products: [Product]
     let v: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case userID = "userId"
@@ -27,7 +27,7 @@ struct FakeAPIModelCart: Codable, Identifiable {
 struct Product: Codable {
     let productID: Int
     let quantity: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case productID = "productId"
         case quantity

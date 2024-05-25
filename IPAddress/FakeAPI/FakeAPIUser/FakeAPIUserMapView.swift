@@ -49,7 +49,7 @@ import MapKit
 
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
-
+    
     var body: some View {
         Map(coordinateRegion: .constant(MKCoordinateRegion(
             center: coordinate,

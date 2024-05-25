@@ -28,9 +28,9 @@ struct FakeAPIUsersDetails: View {
             }
             .padding()
             
-//            VStack{
-//                MapView(coordinate: oneUser.)
-//            }
+            //            VStack{
+            //                MapView(coordinate: oneUser.)
+            //            }
         }
         .navigationTitle(oneUser.name.firstname)
     }

@@ -27,21 +27,39 @@ class UserViewModel: ObservableObject {
         }
         
         URLSession.shared.dataTaskPublisher(for: url)
-                    .map { $0.data }
-                    .handleEvents(receiveOutput: { data in
-//                        print("Received data: \(data)") // Debug print
-//                        if let jsonString = String(data: data, encoding: .utf8) {
-//                            print("JSON String: \(jsonString)") // Debug print
-//                        }
-                    })
-                    .decode(type: [FakeAPIModelUser].self, decoder: JSONDecoder())
-                    .replaceError(with: [])
-                    .receive(on: DispatchQueue.main)
-                    .sink { [weak self] in
-                        self?.users = $0
-                        print("Fetched users: \($0)") // Debug print
+            .tryMap { result -> Data in
+                if let response = result.response as? HTTPURLResponse {
+                    print("response.url = \(String(describing:response.url))")
+                    //                    print("response.mimeType = \(String(describing: response.mimeType))")
+                    //                    print("response.expectedContentLength = \(response.expectedContentLength)")
+                    //                    print("response.textEncodingName = \(String(describing: response.textEncodingName))")
+                    //                    print("response.suggestedFilename = \(String(describing: response.suggestedFilename ))")
+                    
+                    
+                    // HTTPURLResponseのプロパティ
+                    print("response.statusCode = \(response.statusCode)")
+                    //print("response.statusCode localizedString=\(HTTPURLResponse.localizedString(forStatusCode: response.statusCode))")
+                    
+                    for _ in response.allHeaderFields{
+                        //print("response.allHeaderFields[\"\(item.key)\"] = \(item.value)")
                     }
-                    .store(in: &cancellables)
+                }
+                return result.data
+            }
+            .handleEvents(receiveOutput: { data in
+                // Debug print for received data
+                if let jsonString = String(data: data, encoding: .utf8) {
+                    //print("JSON String: \(jsonString)")
+                }
+            })
+            .decode(type: [FakeAPIModelUser].self, decoder: JSONDecoder())
+            .replaceError(with: [])
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] in
+                self?.users = $0
+                //print("Fetched users: \($0)") // Debug print
+            }
+            .store(in: &cancellables)
     }
 }
 
@@ -51,19 +69,19 @@ class UserViewModel: ObservableObject {
 struct UserListView: View {
     //@StateObject private var viewModel = UserViewModel()
     @EnvironmentObject var viewModel: UserViewModel
-
+    
     var body: some View {
-//        NavigationView {
-            List(viewModel.users) { user in
-                NavigationLink(destination: FakeAPIUsersDetails(oneUser: user)) {
-                    UserRowView(user: user)
-                }
+        //        NavigationView {
+        List(viewModel.users) { user in
+            NavigationLink(destination: FakeAPIUsersDetails(oneUser: user)) {
+                UserRowView(user: user)
             }
-            //.navigationTitle("Users")
-            .onAppear {
-                viewModel.fetchUsers()
-            }
-//        }
+        }
+        //.navigationTitle("Users")
+        .onAppear {
+            viewModel.fetchUsers()
+        }
+        //        }
     }
 }
 
@@ -72,7 +90,7 @@ struct UserListView: View {
 
 struct UserRowView: View {
     let user: FakeAPIModelUser
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -93,10 +111,10 @@ struct UserRowView: View {
                         .frame(width: 60, height: 60)
                         .cornerRadius(10)
                 }
-//                Spacer()
-//                MapView(coordinate: user.address.geolocation.locationCoordinate)
-//                    .frame(width: 100, height: 100)
-//                    .cornerRadius(10)
+                //                Spacer()
+                //                MapView(coordinate: user.address.geolocation.locationCoordinate)
+                //                    .frame(width: 100, height: 100)
+                //                    .cornerRadius(10)
             }
         }
         .padding()

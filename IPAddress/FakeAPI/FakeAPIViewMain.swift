@@ -13,12 +13,11 @@ struct FakeAPIViewMain: View {
     @StateObject private var productViewModel = ProductViewModel()
     @StateObject private var cartViewModel = CartViewModel()
     @StateObject private var userViewModel = UserViewModel()
-
+    
     let gradientColors = [
         UIColor(red: 0.00, green: 0.27, blue: 0.58, alpha: 1.00).cgColor,
-           UIColor(red: 0.06, green: 0.68, blue: 1.00, alpha: 1.00)
+            UIColor(red: 0.06, green: 0.68, blue: 1.00, alpha: 1.00)
             .cgColor]
-    
     
     var body: some View {
         NavigationView {
@@ -80,26 +79,25 @@ struct FakeAPIViewMain: View {
                     }
                     .foregroundColor(selectedTab == 2 ? .blue : .gray)
                 }
-                .frame(width: 80, height: 60)
+                .frame(height: 80)
                 .background(Color(UIColor.systemBackground))
                 .padding(.top, 5)
-                //.padding(.horizontal)
-                
                 
                 // Display selected tab content
-                VStack {
-                    if selectedTab == 0 {
-                        ProductListView()
-                            .environmentObject(productViewModel)
-                    } else if selectedTab == 1 {
-                        CartListView()
-                            .environmentObject(cartViewModel)
-                    } else if selectedTab == 2 {
-                        UserListView()
-                            .environmentObject(userViewModel)
-                    }
+                TabView(selection: $selectedTab) {
+                    ProductListView()
+                        .environmentObject(productViewModel)
+                        .tag(0)
+                    
+                    CartListView()
+                        .environmentObject(cartViewModel)
+                        .tag(1)
+                    
+                    UserListView()
+                        .environmentObject(userViewModel)
+                        .tag(2)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             }
         }
     }

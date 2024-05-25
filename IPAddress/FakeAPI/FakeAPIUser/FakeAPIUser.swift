@@ -108,13 +108,9 @@ struct UserRowView: View {
                 
                 VStack{
                     MapView(coordinate: user.address.geolocation.locationCoordinate)
-                        .frame(width: 60, height: 60)
+                        .frame(width: 70, height: 70)
                         .cornerRadius(10)
                 }
-                //                Spacer()
-                //                MapView(coordinate: user.address.geolocation.locationCoordinate)
-                //                    .frame(width: 100, height: 100)
-                //                    .cornerRadius(10)
             }
         }
         .padding()

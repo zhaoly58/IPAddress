@@ -39,14 +39,15 @@ struct ContentView: View {
                         Image(systemName: "gearshape")
                         Text("Settings")
                     }
-                }
             }
+            //.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }
     }
+}
 
 
 
-    
+
 
 #Preview {
     ContentView()

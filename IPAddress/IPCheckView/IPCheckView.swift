@@ -199,6 +199,18 @@ struct IPCheckTab: View {
                     print(ipAddress!)
                     print(hitUrl)
                     
+                    if let response = response as? HTTPURLResponse {
+                        print("response.url = \(String(describing:response.url))")
+                        print("response.mimeType = \(String(describing: response.mimeType))")
+                        print("response.expectedContentLength = \(response.expectedContentLength)")
+                        print("response.textEncodingName = \(String(describing: response.textEncodingName))")
+                        print("response.suggestedFilename = \(String(describing: response.suggestedFilename ))")
+
+
+                                // HTTPURLResponseのプロパティ
+                        print("response.statusCode = \(response.statusCode)")
+                        print("response.statusCode localizedString=\(HTTPURLResponse.localizedString(forStatusCode: response.statusCode))")
+                    }
                     
                     
                 } catch let error {

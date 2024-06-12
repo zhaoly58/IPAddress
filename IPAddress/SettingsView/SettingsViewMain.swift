@@ -12,13 +12,6 @@ struct SettingsViewMain: View {
         NavigationView {
             ScrollView(showsIndicators: false){
                 VStack(alignment: .leading) {
-                    HStack(){
-                        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
-                        Text("v\(appVersion)")
-                            .foregroundColor(.black)
-                    }
-                    
-                    Divider()
                     
                     HStack(){
                         Image(systemName: "link.circle")
@@ -36,6 +29,14 @@ struct SettingsViewMain: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 20, height: 20)
                         Link("Contact", destination: URL(string: "mailto:jimmyzly88@gmail.com")!)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(){
+                        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+                        Text("v\(appVersion)")
+                            .foregroundColor(.black)
                     }
                     
                     Divider()

@@ -98,7 +98,6 @@ struct IPCheckTab: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.green, lineWidth: 1)
                     )
-                    
                 }
                 .padding(.top, 10)
             }

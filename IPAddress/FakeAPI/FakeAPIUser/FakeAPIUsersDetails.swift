@@ -18,19 +18,20 @@ struct FakeAPIUsersDetails: View {
                     Text("Name")
                         .fontWeight(.semibold)
                     Text("\(oneUser.name.firstname) \(oneUser.name.lastname)")
-                    Text(oneUser.name.lastname)
                 }
                 
                 VStack(alignment: .leading){
                     Text("Email")
                         .fontWeight(.semibold)
-                    Text(oneUser.email)
+                    Link("\(oneUser.email)", destination: URL(string: "mailto:\(oneUser.email)")!)
                 }
+                
                 
                 VStack(alignment: .leading){
                     Text("Phone")
                         .fontWeight(.semibold)
                     Text(oneUser.phone)
+                    
                 }
                 
                 VStack(alignment: .leading){
@@ -39,12 +40,18 @@ struct FakeAPIUsersDetails: View {
                     Text("\(oneUser.address.street), \(oneUser.address.city), \(oneUser.address.zipcode)")
                 }
                 
+                VStack(alignment: .leading){
+                    Text("GPS")
+                        .fontWeight(.semibold)
+                    Text("\(oneUser.address.geolocation)")
+                }
+                
                 
                 //Text("Geolocation: Lat \(oneUser.address.geolocation.lat), Long \(oneUser.address.geolocation.long)")
                 
                 VStack{
                     MapView(coordinate: oneUser.address.geolocation.locationCoordinate)
-                        .frame(width: 200, height: 200)
+                        .frame(width: 300, height: 300)
                         .cornerRadius(10)
                 }
             }

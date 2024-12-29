@@ -180,7 +180,15 @@ struct IPCheckTab: View {
         })
         .onAppear{
             loadImageFromURL()
-            //fetchDataFromAPI()
+            getPublicIPAddress { publicIP in
+                if let publicIP = publicIP {
+                    userInputIP = publicIP
+                    print("My public IP Address is: \(userInputIP)")
+                    // Save the IP address to user defaults or handle as needed
+                    
+                }
+                fetchDataFromAPI()
+            }
         }
     }
     

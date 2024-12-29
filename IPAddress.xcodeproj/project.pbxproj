@@ -35,7 +35,7 @@
 		42CC4A352BF0A23100343944 /* UrlOfTopImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC4A342BF0A23100343944 /* UrlOfTopImage.swift */; };
 		42CC4A3F2BF0DE0F00343944 /* IPCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC4A3E2BF0DE0F00343944 /* IPCheckView.swift */; };
 		42CC4A462BF0ECB100343944 /* SettingsViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC4A452BF0ECB100343944 /* SettingsViewMain.swift */; };
-		42DCC4EF2BFB0CBA00349759 /* FakeAPIDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DCC4EE2BFB0CBA00349759 /* FakeAPIDataModel.swift */; };
+		42DCC4EF2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DCC4EE2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +83,7 @@
 		42CC4A342BF0A23100343944 /* UrlOfTopImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlOfTopImage.swift; sourceTree = "<group>"; };
 		42CC4A3E2BF0DE0F00343944 /* IPCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPCheckView.swift; sourceTree = "<group>"; };
 		42CC4A452BF0ECB100343944 /* SettingsViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewMain.swift; sourceTree = "<group>"; };
-		42DCC4EE2BFB0CBA00349759 /* FakeAPIDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIDataModel.swift; sourceTree = "<group>"; };
+		42DCC4EE2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIDataModelProduct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,7 +254,7 @@
 		42DCC4ED2BFB0CA500349759 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				42DCC4EE2BFB0CBA00349759 /* FakeAPIDataModel.swift */,
+				42DCC4EE2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift */,
 				420F25A62BFB34F0006B93F2 /* FakeAPIDataModelCart.swift */,
 				420F25BA2BFC690D006B93F2 /* FakeAPIDataModelUser.swift */,
 			);
@@ -412,7 +412,7 @@
 				420E780A2BEB3D9500C92968 /* ContentView.swift in Sources */,
 				420F25B72BFC2AD7006B93F2 /* FakeAPICartsDetails.swift in Sources */,
 				428B5AD82BF1EA2F008B22D2 /* FakeAPIEndpoints.swift in Sources */,
-				42DCC4EF2BFB0CBA00349759 /* FakeAPIDataModel.swift in Sources */,
+				42DCC4EF2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift in Sources */,
 				42CC4A352BF0A23100343944 /* UrlOfTopImage.swift in Sources */,
 				428B5ADA2BF20848008B22D2 /* IPCheckViewMain.swift in Sources */,
 				42CC4A462BF0ECB100343944 /* SettingsViewMain.swift in Sources */,
@@ -600,7 +600,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.8;
+				MARKETING_VERSION = 1.4.08;
 				PRODUCT_BUNDLE_IDENTIFIER = com.IPAddress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -631,7 +631,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.8;
+				MARKETING_VERSION = 1.4.08;
 				PRODUCT_BUNDLE_IDENTIFIER = com.IPAddress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -8,12 +8,13 @@
 import Foundation
 
 // MARK: - FakeAPIElement
-struct FakeAPIModelCart: Codable {
-    let id, userID: Int
+struct FakeAPIModelCart: Codable, Identifiable {
+    let id: Int
+    let userID: Int
     let date: String
     let products: [Product]
     let v: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case userID = "userId"
@@ -24,14 +25,15 @@ struct FakeAPIModelCart: Codable {
 
 // MARK: - Product
 struct Product: Codable {
-    let productID, quantity: Int
-
+    let productID: Int
+    let quantity: Int
+    
     enum CodingKeys: String, CodingKey {
         case productID = "productId"
         case quantity
     }
 }
 
-//typealias FakeAPI = [FakeAPIModelCart]
+typealias FakeAPICarts = [FakeAPIModelCart]
 
 

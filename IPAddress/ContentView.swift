@@ -24,7 +24,7 @@ struct ContentView: View {
                 
                 
                 // Ping tab
-                FakeAPIMain()
+                FakeAPIViewMain()
                     .navigationTitle("Fake API")
                     .tabItem {
                         Image(systemName: "network")
@@ -39,13 +39,15 @@ struct ContentView: View {
                         Image(systemName: "gearshape")
                         Text("Settings")
                     }
-                }
             }
+            //.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }
     }
+}
 
 
-    
+
+
 
 #Preview {
     ContentView()

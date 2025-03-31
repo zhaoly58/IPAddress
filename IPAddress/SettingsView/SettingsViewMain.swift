@@ -10,19 +10,41 @@ import SwiftUI
 struct SettingsViewMain: View {
     var body: some View {
         NavigationView {
-        ScrollView(showsIndicators: false){
-            VStack(alignment: .leading) {
-                VStack(){
-                    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
-                    Text("v\(appVersion)")
-                        .foregroundColor(.black)
+            ScrollView(showsIndicators: false){
+                VStack(alignment: .leading) {
+                    
+                    HStack(){
+                        Image(systemName: "link.circle")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 20, height: 20)
+                        Link("Source Code", destination: URL(string: "https://github.com/JimmyZhaoTerraMotors/IPAddress")!)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(){
+                        Image(systemName: "pencil.and.scribble")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 20, height: 20)
+                        Link("Contact", destination: URL(string: "mailto:jimmyzly88@gmail.com")!)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(){
+                        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+                        Text("v\(appVersion)")
+                            .foregroundColor(.black)
+                    }
+                    
+                    Divider()
+                    
                 }
-                
-                Divider()
+                .padding(30)
             }
-            .padding(30)
         }
-    }
     }
 }
 

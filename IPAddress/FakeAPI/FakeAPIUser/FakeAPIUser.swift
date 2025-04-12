@@ -5,27 +5,26 @@
 //  Created by Jimmy Zhao on 2024/05/13.
 //
 
-import SwiftUI
-import MapKit
-import Foundation
 import Combine
-
+import Foundation
+import MapKit
+import SwiftUI
 
 class UserViewModel: ObservableObject {
     @Published var users: [FakeAPIModelUser] = []
-    
+
     private var cancellables = Set<AnyCancellable>()
-    
+
     init() {
         fetchUsers()
     }
-    
+
     func fetchUsers() {
         guard let url = URL(string: fakeAPIUsersUrl) else {
-            print("Invalid URL") // Debug print
+            print("Invalid URL")  // Debug print
             return
         }
-        
+
         URLSession.shared.dataTaskPublisher(for: url)
             .tryMap { result -> Data in
                 if let response = result.response as? HTTPURLResponse {
@@ -34,13 +33,12 @@ class UserViewModel: ObservableObject {
                     //                    print("response.expectedContentLength = \(response.expectedContentLength)")
                     //                    print("response.textEncodingName = \(String(describing: response.textEncodingName))")
                     //                    print("response.suggestedFilename = \(String(describing: response.suggestedFilename ))")
-                    
-                    
+
                     // HTTPURLResponseのプロパティ
                     print("response.statusCode = \(response.statusCode)")
                     //print("response.statusCode localizedString=\(HTTPURLResponse.localizedString(forStatusCode: response.statusCode))")
-                    
-                    for _ in response.allHeaderFields{
+
+                    for _ in response.allHeaderFields {
                         //print("response.allHeaderFields[\"\(item.key)\"] = \(item.value)")
                     }
                 }
@@ -63,13 +61,10 @@ class UserViewModel: ObservableObject {
     }
 }
 
-
-
-
 struct UserListView: View {
     //@StateObject private var viewModel = UserViewModel()
     @EnvironmentObject var viewModel: UserViewModel
-    
+
     var body: some View {
         //        NavigationView {
         List(viewModel.users) { user in
@@ -85,12 +80,9 @@ struct UserListView: View {
     }
 }
 
-
-
-
 struct UserRowView: View {
     let user: FakeAPIModelUser
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -103,13 +95,15 @@ struct UserRowView: View {
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
-                
+
                 Spacer()
-                
-                VStack{
-                    MapView(coordinate: user.address.geolocation.locationCoordinate)
-                        .frame(width: 70, height: 70)
-                        .cornerRadius(10)
+
+                VStack {
+                    MapView(
+                        coordinate: user.address.geolocation.locationCoordinate
+                    )
+                    .frame(width: 70, height: 70)
+                    .cornerRadius(10)
                 }
             }
         }
@@ -117,10 +111,7 @@ struct UserRowView: View {
     }
 }
 
-
-
 #Preview {
     UserListView()
         .environmentObject(UserViewModel())
 }
-

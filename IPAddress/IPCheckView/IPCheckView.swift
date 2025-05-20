@@ -59,10 +59,10 @@ struct IPCheckTab: View {
                     .cornerRadius(10)
                     .overlay {
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.blue, lineWidth: 1)
+                            .stroke(Color.blue, lineWidth: 2)
                     }
                     .alert(isPresented: $showAlert) {
-                        Alert(title: Text("报错了!"), message: Text("请不要忘记输入 IP 地址"), dismissButton: .default(Text("欧克~")))
+                        Alert(title: Text("报错了!"), message: Text("请输入 IP 地址"), dismissButton: .default(Text("欧克~")))
                     }
                     
                     Button("Clear") {
@@ -74,7 +74,7 @@ struct IPCheckTab: View {
                     .cornerRadius(10)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.red, lineWidth: 1)
+                            .stroke(Color.red, lineWidth: 2)
                     )
                     
                     
@@ -96,7 +96,7 @@ struct IPCheckTab: View {
                     .cornerRadius(10)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.green, lineWidth: 1)
+                            .stroke(Color.green, lineWidth: 2)
                     )
                 }
                 .padding(.top, 10)

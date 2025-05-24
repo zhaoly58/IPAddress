@@ -32,6 +32,13 @@ struct ContentView: View {
                     }
                 
                 
+                MVVMViewMain()
+                    .navigationTitle("MVVM User Name")
+                    .tabItem {
+                        Image(systemName: "person.circle")
+                        Text("MVVM User Name")
+                    }
+                
                 // Settings tab
                 SettingsViewMain()
                     .navigationTitle("Settings")

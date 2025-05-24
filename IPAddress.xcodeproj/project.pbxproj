@@ -35,6 +35,10 @@
 		42CC4A352BF0A23100343944 /* UrlOfTopImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC4A342BF0A23100343944 /* UrlOfTopImage.swift */; };
 		42CC4A3F2BF0DE0F00343944 /* IPCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC4A3E2BF0DE0F00343944 /* IPCheckView.swift */; };
 		42CC4A462BF0ECB100343944 /* SettingsViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC4A452BF0ECB100343944 /* SettingsViewMain.swift */; };
+		42CF4E4B2DE19F2300C72A2B /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CF4E4A2DE19F1800C72A2B /* userModel.swift */; };
+		42CF4E4E2DE19F6600C72A2B /* userView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CF4E4D2DE19F6600C72A2B /* userView.swift */; };
+		42CF4E512DE19FB000C72A2B /* viewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CF4E502DE19FAC00C72A2B /* viewModel.swift */; };
+		42CF4E532DE1A0F100C72A2B /* MVVMViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CF4E522DE1A0F100C72A2B /* MVVMViewMain.swift */; };
 		42DCC4EF2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DCC4EE2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +87,10 @@
 		42CC4A342BF0A23100343944 /* UrlOfTopImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlOfTopImage.swift; sourceTree = "<group>"; };
 		42CC4A3E2BF0DE0F00343944 /* IPCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPCheckView.swift; sourceTree = "<group>"; };
 		42CC4A452BF0ECB100343944 /* SettingsViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewMain.swift; sourceTree = "<group>"; };
+		42CF4E4A2DE19F1800C72A2B /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
+		42CF4E4D2DE19F6600C72A2B /* userView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userView.swift; sourceTree = "<group>"; };
+		42CF4E502DE19FAC00C72A2B /* viewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModel.swift; sourceTree = "<group>"; };
+		42CF4E522DE1A0F100C72A2B /* MVVMViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewMain.swift; sourceTree = "<group>"; };
 		42DCC4EE2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIDataModelProduct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +147,7 @@
 		420E78062BEB3D9500C92968 /* IPAddress */ = {
 			isa = PBXGroup;
 			children = (
+				42CF4E482DE19EA400C72A2B /* MVVM */,
 				428B5ACC2BF1E7AC008B22D2 /* FakeAPI */,
 				420E780B2BEB3D9600C92968 /* Assets.xcassets */,
 				420E78072BEB3D9500C92968 /* IPAddressApp.swift */,
@@ -249,6 +258,41 @@
 				42CC4A452BF0ECB100343944 /* SettingsViewMain.swift */,
 			);
 			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		42CF4E482DE19EA400C72A2B /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				42CF4E4F2DE19F9F00C72A2B /* ViewModel */,
+				42CF4E4C2DE19F4F00C72A2B /* View */,
+				42CF4E492DE19F1000C72A2B /* Model */,
+				42CF4E522DE1A0F100C72A2B /* MVVMViewMain.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		42CF4E492DE19F1000C72A2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42CF4E4A2DE19F1800C72A2B /* userModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		42CF4E4C2DE19F4F00C72A2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42CF4E4D2DE19F6600C72A2B /* userView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42CF4E4F2DE19F9F00C72A2B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42CF4E502DE19FAC00C72A2B /* viewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		42DCC4ED2BFB0CA500349759 /* DataModel */ = {
@@ -404,8 +448,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				42CC4A3F2BF0DE0F00343944 /* IPCheckView.swift in Sources */,
+				42CF4E4B2DE19F2300C72A2B /* userModel.swift in Sources */,
 				428B5AD22BF1E8D1008B22D2 /* FakeAPIProducts.swift in Sources */,
+				42CF4E532DE1A0F100C72A2B /* MVVMViewMain.swift in Sources */,
 				420F25B32BFB9831006B93F2 /* FakeAPIProductsDetails.swift in Sources */,
+				42CF4E512DE19FB000C72A2B /* viewModel.swift in Sources */,
 				428B5AD62BF1E9CB008B22D2 /* FakeAPIUser.swift in Sources */,
 				42CC4A332BF097E700343944 /* MyOwnIPAddress.swift in Sources */,
 				428B5AD02BF1E86E008B22D2 /* FakeAPIViewMain.swift in Sources */,
@@ -415,6 +462,7 @@
 				42DCC4EF2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift in Sources */,
 				42CC4A352BF0A23100343944 /* UrlOfTopImage.swift in Sources */,
 				428B5ADA2BF20848008B22D2 /* IPCheckViewMain.swift in Sources */,
+				42CF4E4E2DE19F6600C72A2B /* userView.swift in Sources */,
 				42CC4A462BF0ECB100343944 /* SettingsViewMain.swift in Sources */,
 				420F25BF2BFC7A1E006B93F2 /* FakeAPIUsersDetails.swift in Sources */,
 				428B5AD42BF1E9AF008B22D2 /* FakeAPICart.swift in Sources */,

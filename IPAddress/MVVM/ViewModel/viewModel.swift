@@ -6,6 +6,7 @@
 //
 
 import Combine
+@testable import IPAddress
 
 class MVVMUserViewModel: ObservableObject {
     @Published var user = User(name: "Jimmy")

@@ -36,7 +36,7 @@ struct ContentView: View {
                     .navigationTitle("MVVM User Name")
                     .tabItem {
                         Image(systemName: "person.circle")
-                        Text("MVVM User Name")
+                        Text("MVVM")
                     }
                 
                 // Settings tab

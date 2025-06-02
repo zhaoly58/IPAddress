@@ -643,7 +643,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IPAddress/Preview Content\"";
-				DEVELOPMENT_TEAM = 55X25W6RHS;
+				DEVELOPMENT_TEAM = M5WBED9D7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -657,7 +657,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.88;
+				MARKETING_VERSION = 1.7.88;
 				PRODUCT_BUNDLE_IDENTIFIER = com.LiangyuZhao.IPAddress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -676,7 +676,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IPAddress/Preview Content\"";
-				DEVELOPMENT_TEAM = 55X25W6RHS;
+				DEVELOPMENT_TEAM = M5WBED9D7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -690,7 +690,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.88;
+				MARKETING_VERSION = 1.7.88;
 				PRODUCT_BUNDLE_IDENTIFIER = com.LiangyuZhao.IPAddress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

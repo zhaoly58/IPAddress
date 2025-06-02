@@ -18,7 +18,7 @@ struct SettingsViewMain: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 20, height: 20)
-                        Link("Source Code", destination: URL(string: "https://github.com/JimmyZhaoTerraMotors/IPAddress")!)
+                        Link("Source Code", destination: URL(string: "https://github.com/zhaoly58/IPAddress#")!)
                     }
                     
                     Divider()

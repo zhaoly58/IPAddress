@@ -657,7 +657,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.88;
+				MARKETING_VERSION = 1.7.92;
 				PRODUCT_BUNDLE_IDENTIFIER = com.LiangyuZhao.IPAddress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -690,7 +690,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.88;
+				MARKETING_VERSION = 1.7.92;
 				PRODUCT_BUNDLE_IDENTIFIER = com.LiangyuZhao.IPAddress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

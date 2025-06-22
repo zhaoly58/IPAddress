@@ -116,6 +116,7 @@
 		42DCC4EE2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIDataModelProduct.swift; sourceTree = "<group>"; };
 		42F3BF4C2E05A25000EFDAE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42F3BF542E0817C300EFDAE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42F3BF562E0819DD00EFDAE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +190,7 @@
 		420E78062BEB3D9500C92968 /* IPAddress */ = {
 			isa = PBXGroup;
 			children = (
+				42F3BF562E0819DD00EFDAE0 /* Info.plist */,
 				42F3BF542E0817C300EFDAE0 /* GoogleService-Info.plist */,
 				42CF4E482DE19EA400C72A2B /* MVVM */,
 				428B5ACC2BF1E7AC008B22D2 /* FakeAPI */,
@@ -713,6 +715,7 @@
 				DEVELOPMENT_TEAM = M5WBED9D7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IPAddress/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -746,6 +749,7 @@
 				DEVELOPMENT_TEAM = M5WBED9D7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IPAddress/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

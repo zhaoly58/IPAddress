@@ -31,6 +31,7 @@
 		428B5AD62BF1E9CB008B22D2 /* FakeAPIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B5AD52BF1E9CB008B22D2 /* FakeAPIUser.swift */; };
 		428B5AD82BF1EA2F008B22D2 /* FakeAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B5AD72BF1EA2F008B22D2 /* FakeAPIEndpoints.swift */; };
 		428B5ADA2BF20848008B22D2 /* IPCheckViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B5AD92BF20848008B22D2 /* IPCheckViewMain.swift */; };
+		42C0F1E12E0C4500001DADCC /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 42C0F1E02E0C4500001DADCC /* FirebaseInAppMessaging-Beta */; };
 		42CC4A332BF097E700343944 /* MyOwnIPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC4A322BF097E700343944 /* MyOwnIPAddress.swift */; };
 		42CC4A352BF0A23100343944 /* UrlOfTopImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC4A342BF0A23100343944 /* UrlOfTopImage.swift */; };
 		42CC4A3F2BF0DE0F00343944 /* IPCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC4A3E2BF0DE0F00343944 /* IPCheckView.swift */; };
@@ -134,6 +135,7 @@
 				4275B33A2BF0F7B70083AA94 /* URLImage in Frameworks */,
 				42F3BF2D2E05A1B700EFDAE0 /* FirebaseAnalyticsCore in Frameworks */,
 				42F3BF352E05A1B700EFDAE0 /* FirebaseAuth in Frameworks */,
+				42C0F1E12E0C4500001DADCC /* FirebaseInAppMessaging-Beta in Frameworks */,
 				42F3BF412E05A1B700EFDAE0 /* FirebaseInstallations in Frameworks */,
 				42F3BF3D2E05A1B700EFDAE0 /* FirebaseFirestore in Frameworks */,
 				42F3BF492E05A1B700EFDAE0 /* FirebaseStorage in Frameworks */,
@@ -398,6 +400,7 @@
 				42F3BF462E05A1B700EFDAE0 /* FirebaseRemoteConfig */,
 				42F3BF482E05A1B700EFDAE0 /* FirebaseStorage */,
 				42F3BF4A2E05A1B700EFDAE0 /* FirebaseVertexAI */,
+				42C0F1E02E0C4500001DADCC /* FirebaseInAppMessaging-Beta */,
 			);
 			productName = IPAddress;
 			productReference = 420E78042BEB3D9500C92968 /* IPAddress.app */;
@@ -951,6 +954,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 429EF2262BEF3DEA00878B79 /* XCRemoteSwiftPackageReference "SwiftSVG" */;
 			productName = SwiftSVG;
+		};
+		42C0F1E02E0C4500001DADCC /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "FirebaseInAppMessaging-Beta";
 		};
 		42F3BF282E05A1B700EFDAE0 /* FirebaseAI */ = {
 			isa = XCSwiftPackageProductDependency;

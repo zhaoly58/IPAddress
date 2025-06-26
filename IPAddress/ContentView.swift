@@ -8,6 +8,8 @@
 import SwiftUI
 import URLImage
 import SwiftSVG
+import FirebaseAnalytics
+
 
 
 struct ContentView: View {
@@ -46,6 +48,12 @@ struct ContentView: View {
                         Image(systemName: "gearshape")
                         Text("Settings")
                     }
+                
+                Button("触发测试事件 viewed_situation") {
+                    Analytics.logEvent("viewed_situation", parameters: ["source": "manual_test"])
+                    print("📡 Logged event: viewed_situation")
+                }
+                .padding()
             }
             //.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }

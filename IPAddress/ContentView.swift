@@ -13,6 +13,7 @@ import FirebaseAnalytics
 
 
 struct ContentView: View {
+    
     var body: some View {
         NavigationView {
             TabView{
@@ -41,6 +42,18 @@ struct ContentView: View {
                         Text("MVVM")
                     }
                 
+                
+                if #available(iOS 26.0, *) {
+                    AIViewMain()
+                        .navigationTitle("AI Foundation Models")
+                        .tabItem {
+                            Image(systemName: "brain.head.profile")
+                            Text("AI")
+                        }
+                } else {
+                    // Fallback on earlier versions
+                }
+                
                 // Settings tab
                 SettingsViewMain()
                     .navigationTitle("Settings")
@@ -49,17 +62,17 @@ struct ContentView: View {
                         Text("Settings")
                     }
                 
-                Button("触发测试事件 viewed_situation") {
-                    Analytics.logEvent("viewed_situation", parameters: ["source": "manual_test"])
-                    print("📡 Logged event: viewed_situation")
-                }
-                .padding()
+                
+                //                Button("触发测试事件 viewed_situation") {
+                //                    Analytics.logEvent("viewed_situation", parameters: ["source": "manual_test"])
+                //                    print("📡 Logged event: viewed_situation")
+                //                }
+                //                .padding()
             }
             //.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }
     }
 }
-
 
 
 

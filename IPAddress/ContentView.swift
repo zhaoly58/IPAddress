@@ -45,7 +45,7 @@ struct ContentView: View {
                 AppIconMain()
                     .navigationTitle("App Icon")
                     .tabItem {
-                        Image(systemName: "person.circle")
+                        Image(systemName: "matter.logo")
                         Text("App Icon")
                     }
                 

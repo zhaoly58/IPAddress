@@ -42,6 +42,12 @@ struct ContentView: View {
                         Text("MVVM")
                     }
                 
+                AppIconMain()
+                    .navigationTitle("App Icon")
+                    .tabItem {
+                        Image(systemName: "person.circle")
+                        Text("App Icon")
+                    }
                 
                 if #available(iOS 26.0, *) {
                     AIViewMain()

@@ -37,12 +37,14 @@ struct AppIconMain: View {
     
     /// icon name 映射到 Assets 中的资源前缀
     let customIcons: [(displayName: String, assetName: String?)] = [
-        ("默认图标", nil),                 // 主图标用 nil
-        ("红色图标", "AppIcon 1"),
-        ("蓝色图标", "AppIcon 2")
+        ("Default icon", nil),                 // 主图标用 nil
+        ("Black icon", "AppIcon 1"),
+        ("Orange icon", "AppIcon 2")
     ]
     
     var body: some View {
+        padding()
+        
         NavigationStack {
             List {
                 ForEach(customIcons, id: \.assetName) { item in
@@ -73,23 +75,8 @@ struct AppIconMain: View {
     
     /// 获取预览图（可自行替换成 Assets 中的缩略图）
     func iconPreviewImage(for name: String?) -> UIImage {
-        let fallback = UIImage(systemName: "app")!
-        
-        // 用于预览的图标建议取 120x120 或 60x60 大小图
-        let previewName = name ?? "AppIcon"
-        let imageNames = [
-            "\(previewName)_60",  // 你也可以用 "60.png" 之类的命名
-            "\(previewName)_120",
-            previewName
-        ]
-        
-        for imageName in imageNames {
-            if let img = UIImage(named: imageName) {
-                return img
-            }
-        }
-        
-        return fallback
+        let previewName = name ?? "AppIcon" // 主图标
+        return UIImage(named: previewName) ?? UIImage(systemName: "app")!
     }
     
     func switchIcon(to name: String?) {

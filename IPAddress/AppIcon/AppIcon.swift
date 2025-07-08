@@ -3,6 +3,7 @@ import SwiftUI
 struct AppIconMain: View {
     @AppStorage("SelectedIcon") private var activeAppIcon: String = "AppIcon"
     @AppStorage("EnableAutoSwitch") private var autoSwitchEnabled: Bool = false
+    @AppStorage("AppearanceIconDeclined") private var declinedAppearanceIconKey: String = ""
     
     @Environment(\.colorScheme) private var colorScheme
     @State private var showAppearancePrompt = false
@@ -90,6 +91,7 @@ struct AppIconMain: View {
                 evaluateIconSwitch(for: colorScheme)
             }
             .onChange(of: colorScheme) { newScheme in
+                declinedAppearanceIconKey = ""
                 evaluateIconSwitch(for: newScheme)
             }
             .onReceive(timeDisplayTimer) { _ in
@@ -97,7 +99,7 @@ struct AppIconMain: View {
             }
             .onReceive(iconSwitchTimer) { _ in
                 guard autoSwitchEnabled else { return }
-
+                
                 let availableIcons = customIcons.map(\.assetName).filter { $0 != activeAppIcon }
                 if let randomIcon = availableIcons.randomElement() {
                     switchIcon(to: randomIcon)
@@ -109,7 +111,9 @@ struct AppIconMain: View {
                 Button("Update Icon") {
                     switchIcon(to: suggestedIconName)
                 }
-                Button("Cancel", role: .cancel) {}
+                Button("Cancel", role: .cancel) {
+                    declinedAppearanceIconKey = colorScheme == .dark ? "dark" : "light"
+                }
             }
         }
     }
@@ -129,6 +133,13 @@ struct AppIconMain: View {
     }
     
     func evaluateIconSwitch(for scheme: ColorScheme) {
+        let currentAppearance = scheme == .dark ? "dark" : "light"
+        
+        // 若用户曾明确拒绝当前外观下的提示，则不再弹窗
+        if declinedAppearanceIconKey == currentAppearance {
+            return
+        }
+        
         let state: AppearanceIconState
         
         switch (scheme, activeAppIcon) {
@@ -171,6 +182,7 @@ struct AppIconMain: View {
                 print("⚠️ Failed to switch icon: \(error.localizedDescription)")
             } else {
                 activeAppIcon = name ?? "AppIcon"
+                declinedAppearanceIconKey = ""
                 print("✅ Successfully switched to: \(name ?? "AppIcon")")
             }
         }

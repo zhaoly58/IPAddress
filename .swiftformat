@@ -1,0 +1,31 @@
+# Swift version
+--swiftversion 5.9
+
+# 缩进
+--indent 4
+
+# 括号风格（false = K&R 风格）
+--allman false
+
+# 参数换行
+--wraparguments before-first
+
+# 集合换行
+--wrapcollections before-first
+
+# 移除不必要的 self
+--self remove
+
+# 导入排序
+--importgrouping testable-bottom
+
+# range 操作符之间留空格
+--ranges spaced
+
+# 禁止使用分号
+--semicolons never
+
+# 忽略某些路径
+--exclude Pods
+--exclude Carthage
+--exclude fastlane

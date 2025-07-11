@@ -68,7 +68,7 @@ struct AppIconMain: View {
                             Image(uiImage: iconPreviewImage(for: item.assetName))
                                 .resizable()
                                 .frame(width: 48, height: 48)
-                                  .cornerRadius(8)
+                                .cornerRadius(8)
                             
                             Text(item.displayName)
                             

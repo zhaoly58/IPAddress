@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IPCheckViewMain: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView(showsIndicators: false){
                 IPCheckTab()
             }

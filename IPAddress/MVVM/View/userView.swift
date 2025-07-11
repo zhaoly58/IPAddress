@@ -24,13 +24,14 @@ struct userView: View {
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(10)
-//            .overlay(
-//                RoundedRectangle(cornerRadius: 10)
-//                    .stroke(Color.red, lineWidth: 2)
-//            )
+            //            .overlay(
+            //                RoundedRectangle(cornerRadius: 10)
+            //                    .stroke(Color.red, lineWidth: 2)
+            //            )
         }
         .padding()
     }
+    
 }
 
 //#Preview {

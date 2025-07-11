@@ -20,7 +20,7 @@ struct FakeAPIViewMain: View {
             .cgColor]
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 // Custom top tab bar
                 HStack {
@@ -99,6 +99,7 @@ struct FakeAPIViewMain: View {
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             }
+            .navigationTitle("Fake API")
         }
     }
 }

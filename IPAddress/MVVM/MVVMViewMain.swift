@@ -9,10 +9,11 @@ import SwiftUI
 
 struct MVVMViewMain: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView(showsIndicators: false){
                 userView()
             }
+            .navigationTitle("MVVM")
         }
     }
 }

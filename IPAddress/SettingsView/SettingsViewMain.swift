@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsViewMain: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView(showsIndicators: false){
                 VStack(alignment: .leading) {
                     
@@ -44,7 +44,9 @@ struct SettingsViewMain: View {
                 }
                 .padding(30)
             }
+            .navigationTitle("Settings")
         }
+        
     }
 }
 

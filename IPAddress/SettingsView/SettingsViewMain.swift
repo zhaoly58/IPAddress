@@ -45,6 +45,9 @@ struct SettingsViewMain: View {
                 .padding(30)
             }
             .navigationTitle("Settings")
+            
+            BannerAdView()
+                .frame(width: 320, height: 50)
         }
         
     }

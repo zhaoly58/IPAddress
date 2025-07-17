@@ -85,6 +85,7 @@ struct AppIconMain: View {
                         }
                     }
                 }
+                
             }
             .navigationTitle("Change App Icon")
             .onAppear {
@@ -115,6 +116,8 @@ struct AppIconMain: View {
                     declinedAppearanceIconKey = colorScheme == .dark ? "dark" : "light"
                 }
             }
+            BannerAdView()
+                .frame(width: 320, height: 50)
         }
     }
     

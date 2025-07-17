@@ -7,6 +7,7 @@
 
 import SwiftUI
 import URLImage
+import GoogleMobileAds
 
 
 struct IPCheckTab: View {
@@ -17,6 +18,7 @@ struct IPCheckTab: View {
     @FocusState private var isTextFieldFocused: Bool
     var hitUrl : String = ""
     @State private var loadedImage: UIImage?
+//    @StateObject private var interstitial = InterstitialAd()
     
     
     var body: some View {
@@ -98,6 +100,17 @@ struct IPCheckTab: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.green, lineWidth: 2)
                     )
+                    
+//                    Button("显示全屏广告") {
+//                        if let root = UIApplication.shared.windows.first?.rootViewController {
+//                            interstitial.showAd(from: root)
+//                        }
+//                    }
+//                    .disabled(!interstitial.isAdReady)
+//                    .padding()
+//                    .background(interstitial.isAdReady ? Color.blue : Color.gray)
+//                    .foregroundColor(.white)
+//                    .cornerRadius(10)
                 }
                 .padding(.top, 10)
             }

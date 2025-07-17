@@ -44,6 +44,7 @@
 		42DCC4EF2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DCC4EE2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift */; };
 		42E0D7562E2908940092D51B /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 42E0D7552E2908940092D51B /* GoogleMobileAds */; };
 		42E0D7582E2909790092D51B /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D7572E2909760092D51B /* BannerAdView.swift */; };
+		42E0D75A2E2913B80092D51B /* InterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D7592E2913B60092D51B /* InterstitialAd.swift */; };
 		42E7FBBE2E0EE7F500775BCC /* AIViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E7FBBD2E0EE7EF00775BCC /* AIViewMain.swift */; };
 		42F3BF292E05A1B700EFDAE0 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = 42F3BF282E05A1B700EFDAE0 /* FirebaseAI */; };
 		42F3BF2B2E05A1B700EFDAE0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 42F3BF2A2E05A1B700EFDAE0 /* FirebaseAnalytics */; };
@@ -121,6 +122,7 @@
 		42CF4E522DE1A0F100C72A2B /* MVVMViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewMain.swift; sourceTree = "<group>"; };
 		42DCC4EE2BFB0CBA00349759 /* FakeAPIDataModelProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIDataModelProduct.swift; sourceTree = "<group>"; };
 		42E0D7572E2909760092D51B /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		42E0D7592E2913B60092D51B /* InterstitialAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAd.swift; sourceTree = "<group>"; };
 		42E7FBBD2E0EE7EF00775BCC /* AIViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewMain.swift; sourceTree = "<group>"; };
 		42F3BF4C2E05A25000EFDAE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42F3BF542E0817C300EFDAE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		420E78062BEB3D9500C92968 /* IPAddress */ = {
 			isa = PBXGroup;
 			children = (
+				42E0D7592E2913B60092D51B /* InterstitialAd.swift */,
 				42E0D7572E2909760092D51B /* BannerAdView.swift */,
 				421A850A2E18039A0005F026 /* AppIcon */,
 				42E7FBBC2E0EE7DE00775BCC /* AIView */,
@@ -592,6 +595,7 @@
 				42F3BF4E2E05A25400EFDAE0 /* AppDelegate.swift in Sources */,
 				42CC4A352BF0A23100343944 /* UrlOfTopImage.swift in Sources */,
 				42E7FBBE2E0EE7F500775BCC /* AIViewMain.swift in Sources */,
+				42E0D75A2E2913B80092D51B /* InterstitialAd.swift in Sources */,
 				428B5ADA2BF20848008B22D2 /* IPCheckViewMain.swift in Sources */,
 				42CF4E4E2DE19F6600C72A2B /* userView.swift in Sources */,
 				42CC4A462BF0ECB100343944 /* SettingsViewMain.swift in Sources */,

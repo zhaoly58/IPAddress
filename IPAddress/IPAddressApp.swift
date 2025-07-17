@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 @main
 struct IPAddressApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    init() {
+        MobileAds.shared.start(completionHandler: nil)
+            // 设置测试设备（用控制台打印的设备 ID 替换）
+        MobileAds.shared.requestConfiguration.testDeviceIdentifiers = ["YOUR_DEVICE_ID"]
+        }
     
     var body: some Scene {
         WindowGroup {

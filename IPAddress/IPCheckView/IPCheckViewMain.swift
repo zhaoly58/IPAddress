@@ -13,6 +13,8 @@ struct IPCheckViewMain: View {
             ScrollView(showsIndicators: false){
                 IPCheckTab()
             }
+            BannerAdView()
+                .frame(width: 320, height: 50)
         }
     }
 }

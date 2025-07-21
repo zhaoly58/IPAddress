@@ -47,7 +47,7 @@ struct SettingsViewMain: View {
             .navigationTitle("Settings")
             
             BannerAdView()
-                .frame(width: 320, height: 100)
+                .frame(width: 320, height: 250)
         }
         
     }

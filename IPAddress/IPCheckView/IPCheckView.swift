@@ -41,12 +41,12 @@ struct IPCheckTab: View {
             
             VStack {
                 TextField("Enter IP Address", text: $userInputIP)
-                    .frame(width: 220, height: 10)
+                    .frame(width: 240, height: 10)
                     .focused($isTextFieldFocused)
                     .padding()
                     .overlay(
-                        RoundedRectangle(cornerRadius: 1)
-                            .stroke(Color.gray, lineWidth: 1)
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.black, lineWidth: 1)
                     )
                     .padding(.horizontal)
                 
@@ -99,6 +99,18 @@ struct IPCheckTab: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.green, lineWidth: 2)
+                    )
+                    
+                    Button("Show Interstitial ads") {
+                        
+                    }
+                    .frame(width: UIScreen.main.bounds.width - 240, height: 30)
+                    .background(Color.yellow)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.orange.opacity(0.8), lineWidth: 2)
                     )
                     
 //                    Button("显示全屏广告") {
@@ -266,6 +278,6 @@ struct IPCheckTab: View {
 
 
 
-#Preview {
-    IPCheckTab()
-}
+//#Preview {
+//    IPCheckTab()
+//}

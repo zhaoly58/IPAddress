@@ -19,6 +19,7 @@ struct IPCheckTab: View {
     var hitUrl : String = ""
     @State private var loadedImage: UIImage?
 //    @StateObject private var interstitial = InterstitialAd()
+    @StateObject private var interstitialVM = InterstitialViewModel()
     
     
     var body: some View {
@@ -102,7 +103,7 @@ struct IPCheckTab: View {
                     )
                     
                     Button("Show Interstitial ads") {
-                        
+                        interstitialVM.showAd()
                     }
                     .frame(width: UIScreen.main.bounds.width - 240, height: 30)
                     .background(Color.yellow)
@@ -125,6 +126,13 @@ struct IPCheckTab: View {
 //                    .cornerRadius(10)
                 }
                 .padding(.top, 10)
+//                .task{
+//                    await interstitialVM.loadAd()
+//                }
+            }
+            .task{
+                await interstitialVM.loadAd()
+                print("✅ interstitial Ad is ready!")
             }
             .padding()
             

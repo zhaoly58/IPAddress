@@ -16,7 +16,7 @@ struct IPCheckViewMain: View {
                 IPCheckTab()
             }
             .onAppear {
-                let request = Request()
+                let request = Request() // can be '_ = Request()'
                 print("🔥 Triggering ad load request...")
                 // 加载广告后 SDK 会在 Xcode 控制台输出 testDeviceIdentifiers 建议
             }

@@ -36,7 +36,7 @@ struct userView: View {
             Spacer()
             
             BannerAdView()
-                .frame(width: 320, height: 50)
+                .frame(width: 300, height: 250)
         }
     }
     

@@ -117,7 +117,7 @@ struct AppIconMain: View {
                 }
             }
             BannerAdView()
-                .frame(width: 320, height: 50)
+                .frame(width: 320, height: 100)
         }
     }
     

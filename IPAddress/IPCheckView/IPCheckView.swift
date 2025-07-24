@@ -14,7 +14,7 @@ struct IPCheckTab: View {
     
     @State var ipAddress : IPAddress? = nil
     @State var userInputIP: String = ""
-    @State var showAlert = false
+    @State var isShowingAlert = false
     @FocusState private var isTextFieldFocused: Bool
     var hitUrl : String = ""
     @State private var loadedImage: UIImage?
@@ -64,7 +64,7 @@ struct IPCheckTab: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.blue, lineWidth: 2)
                     }
-                    .alert(isPresented: $showAlert) {
+                    .alert(isPresented: $isShowingAlert) {
                         Alert(title: Text("报错了!"), message: Text("请输入 IP 地址"), dismissButton: .default(Text("欧克~")))
                     }
                     
@@ -258,7 +258,7 @@ struct IPCheckTab: View {
             print("The inputted address is empty")
         }
         if userInputIP.isEmpty {
-            showAlert = true // Show alert if userInputIP is empty
+            isShowingAlert = true // Show alert if userInputIP is empty
             return
         }
     }

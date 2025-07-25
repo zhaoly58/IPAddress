@@ -35,12 +35,7 @@ struct ContentView: View {
                     }
                 
                 
-                MVVMViewMain()
-                    .navigationTitle("MVVM User Name")
-                    .tabItem {
-                        Image(systemName: "person.circle")
-                        Text("MVVM")
-                    }
+                
                 
                 AppIconMain()
                     .navigationTitle("App Icon")
@@ -61,6 +56,18 @@ struct ContentView: View {
 //                }
                 
                 NotificationView()
+                    .navigationTitle("Push Notification")
+                    .tabItem {
+                        Image(systemName: "app.badge.fill")
+                        Text("Push Notification")
+                    }
+                
+                MVVMViewMain()
+                    .navigationTitle("MVVM User Name")
+                    .tabItem {
+                        Image(systemName: "person.circle")
+                        Text("MVVM")
+                    }
                 
                 // Settings tab
                 SettingsViewMain()

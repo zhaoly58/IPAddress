@@ -60,6 +60,8 @@ struct ContentView: View {
 //                    // Fallback on earlier versions
 //                }
                 
+                NotificationView()
+                
                 // Settings tab
                 SettingsViewMain()
                     .navigationTitle("Settings")

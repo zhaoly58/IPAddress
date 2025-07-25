@@ -32,6 +32,8 @@
 		428B5AD62BF1E9CB008B22D2 /* FakeAPIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B5AD52BF1E9CB008B22D2 /* FakeAPIUser.swift */; };
 		428B5AD82BF1EA2F008B22D2 /* FakeAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B5AD72BF1EA2F008B22D2 /* FakeAPIEndpoints.swift */; };
 		428B5ADA2BF20848008B22D2 /* IPCheckViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B5AD92BF20848008B22D2 /* IPCheckViewMain.swift */; };
+		42903D3D2E3366E700115F71 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42903D3C2E3366E600115F71 /* NotificationViewModel.swift */; };
+		42903D3F2E33670C00115F71 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42903D3E2E33670800115F71 /* NotificationView.swift */; };
 		42C0F1E12E0C4500001DADCC /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 42C0F1E02E0C4500001DADCC /* FirebaseInAppMessaging-Beta */; };
 		42CC4A332BF097E700343944 /* MyOwnIPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC4A322BF097E700343944 /* MyOwnIPAddress.swift */; };
 		42CC4A352BF0A23100343944 /* UrlOfTopImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC4A342BF0A23100343944 /* UrlOfTopImage.swift */; };
@@ -112,6 +114,8 @@
 		428B5AD52BF1E9CB008B22D2 /* FakeAPIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIUser.swift; sourceTree = "<group>"; };
 		428B5AD72BF1EA2F008B22D2 /* FakeAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIEndpoints.swift; sourceTree = "<group>"; };
 		428B5AD92BF20848008B22D2 /* IPCheckViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPCheckViewMain.swift; sourceTree = "<group>"; };
+		42903D3C2E3366E600115F71 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		42903D3E2E33670800115F71 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		42CC4A322BF097E700343944 /* MyOwnIPAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOwnIPAddress.swift; sourceTree = "<group>"; };
 		42CC4A342BF0A23100343944 /* UrlOfTopImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlOfTopImage.swift; sourceTree = "<group>"; };
 		42CC4A3E2BF0DE0F00343944 /* IPCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPCheckView.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 		420E78062BEB3D9500C92968 /* IPAddress */ = {
 			isa = PBXGroup;
 			children = (
+				42903D372E33650E00115F71 /* PushNotification */,
 				42DBC1A52E2E12DC00051045 /* Admob */,
 				421A850A2E18039A0005F026 /* AppIcon */,
 				42E7FBBC2E0EE7DE00775BCC /* AIView */,
@@ -307,6 +312,31 @@
 				428B5AD72BF1EA2F008B22D2 /* FakeAPIEndpoints.swift */,
 			);
 			path = FakeAPI;
+			sourceTree = "<group>";
+		};
+		42903D372E33650E00115F71 /* PushNotification */ = {
+			isa = PBXGroup;
+			children = (
+				42903D3B2E33663400115F71 /* ViewModel */,
+				42903D3A2E33662F00115F71 /* View */,
+			);
+			path = PushNotification;
+			sourceTree = "<group>";
+		};
+		42903D3A2E33662F00115F71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42903D3E2E33670800115F71 /* NotificationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42903D3B2E33663400115F71 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42903D3C2E3366E600115F71 /* NotificationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		42CC4A402BF0E12100343944 /* IPCheckView */ = {
@@ -592,10 +622,12 @@
 				428B5AD22BF1E8D1008B22D2 /* FakeAPIProducts.swift in Sources */,
 				42CF4E532DE1A0F100C72A2B /* MVVMViewMain.swift in Sources */,
 				420F25B32BFB9831006B93F2 /* FakeAPIProductsDetails.swift in Sources */,
+				42903D3F2E33670C00115F71 /* NotificationView.swift in Sources */,
 				42CF4E512DE19FB000C72A2B /* viewModel.swift in Sources */,
 				428B5AD62BF1E9CB008B22D2 /* FakeAPIUser.swift in Sources */,
 				42CC4A332BF097E700343944 /* MyOwnIPAddress.swift in Sources */,
 				428B5AD02BF1E86E008B22D2 /* FakeAPIViewMain.swift in Sources */,
+				42903D3D2E3366E700115F71 /* NotificationViewModel.swift in Sources */,
 				420E780A2BEB3D9500C92968 /* ContentView.swift in Sources */,
 				420F25B72BFC2AD7006B93F2 /* FakeAPICartsDetails.swift in Sources */,
 				428B5AD82BF1EA2F008B22D2 /* FakeAPIEndpoints.swift in Sources */,

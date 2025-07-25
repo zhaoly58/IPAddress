@@ -53,33 +53,36 @@ struct IPCheckTab: View {
                     .padding(.horizontal)
                 
                 VStack{
-                    Button("Check") {
-                        fetchDataFromAPI()
-                        isTextFieldFocused = false
-                    }
-                    .frame(width: UIScreen.main.bounds.width - 320, height: 30)
-                    .background(.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.blue, lineWidth: 2)
-                    }
-                    .alert(isPresented: $isShowingAlert) {
-                        Alert(title: Text("报错了!"), message: Text("请输入 IP 地址"), dismissButton: .default(Text("欧克~")))
+                    HStack {
+                        Button("Clear") {
+                            userInputIP = ""
+                        }
+                        .frame(width: UIScreen.main.bounds.width - 320, height: 30)
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.red, lineWidth: 2)
+                        )
+                        
+                        Button("Check") {
+                            fetchDataFromAPI()
+                            isTextFieldFocused = false
+                        }
+                        .frame(width: UIScreen.main.bounds.width - 320, height: 30)
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.blue, lineWidth: 2)
+                        }
+                        .alert(isPresented: $isShowingAlert) {
+                            Alert(title: Text("报错了!"), message: Text("请输入 IP 地址"), dismissButton: .default(Text("欧克~")))
+                        }
                     }
                     
-                    Button("Clear") {
-                        userInputIP = ""
-                    }
-                    .frame(width: UIScreen.main.bounds.width - 320, height: 30)
-                    .background(Color.red)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.red, lineWidth: 2)
-                    )
                     
                     
                     Button("My IP Address"){

@@ -29,7 +29,7 @@ class NotificationViewModel: ObservableObject {
         content.body = "这是一条本地推送通知"
         content.sound = .default
 
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2.0, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
 
         UNUserNotificationCenter.current().add(request) { error in

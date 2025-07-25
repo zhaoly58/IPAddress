@@ -21,7 +21,7 @@ struct IPCheckViewMain: View {
                 // 加载广告后 SDK 会在 Xcode 控制台输出 testDeviceIdentifiers 建议
             }
             BannerAdView()
-                .frame(width: 320, height: 100)
+                .frame(width: 320, height: 50)
         }
     }
 }

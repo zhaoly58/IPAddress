@@ -12,7 +12,7 @@ struct SettingsViewMain: View {
         NavigationStack {
             //            ScrollView(showsIndicators: false){
             //                VStack(alignment: .leading) {
-            VStack{
+            VStack {
                 List {
                     Section(header: Text("Source Code")){
                         HStack(){
@@ -44,6 +44,7 @@ struct SettingsViewMain: View {
                         }
                     }
                 }
+                
                 
                 //                }
                 //                .padding(30)

@@ -44,23 +44,23 @@ struct ContentView: View {
                         Text("App Icon")
                     }
                 
-//                if #available(iOS 26.0, *) {
-//                    AIViewMain()
-//                        .navigationTitle("AI Foundation Models")
-//                        .tabItem {
-//                            Image(systemName: "brain.head.profile")
-//                            Text("AI")
-//                        }
-//                } else {
-//                    // Fallback on earlier versions
-//                }
+                //                if #available(iOS 26.0, *) {
+                //                    AIViewMain()
+                //                        .navigationTitle("AI Foundation Models")
+                //                        .tabItem {
+                //                            Image(systemName: "brain.head.profile")
+                //                            Text("AI")
+                //                        }
+                //                } else {
+                //                    // Fallback on earlier versions
+                //                }
                 
-                NotificationView()
-                    .navigationTitle("Push Notification")
-                    .tabItem {
-                        Image(systemName: "app.badge.fill")
-                        Text("Push Notification")
-                    }
+//                NotificationView()
+//                    .navigationTitle("Push Notification")
+//                    .tabItem {
+//                        Image(systemName: "app.badge.fill")
+//                        Text("Push Notification")
+//                    }
                 
                 MVVMViewMain()
                     .navigationTitle("MVVM User Name")

@@ -18,21 +18,23 @@ struct IPCheckTab: View {
     @FocusState private var isTextFieldFocused: Bool
     var hitUrl : String = ""
     @State private var loadedImage: UIImage?
-//    @StateObject private var interstitial = InterstitialAd()
+    //    @StateObject private var interstitial = InterstitialAd()
     @StateObject private var interstitialVM = InterstitialViewModel()
     @StateObject private var viewModel = NotificationViewModel()
     
     
     var body: some View {
         ScrollView(showsIndicators: false){
-            if let loadedImage = loadedImage {
-                Image(uiImage: loadedImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 360, height: 180)
-            } else {
-                ProgressView()
-                    .dynamicTypeSize(.xLarge)// Display a loading indicator until the image is loaded
+            VStack{
+                if let loadedImage = loadedImage {
+                    Image(uiImage: loadedImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 360, height: 180)
+                } else {
+                    ProgressView()
+                        .dynamicTypeSize(.xLarge)// Display a loading indicator until the image is loaded
+                }
             }
             
             //            Image("blueIPLogo")
@@ -144,21 +146,21 @@ struct IPCheckTab: View {
                         }
                     }
                     
-//                    Button("显示全屏广告") {
-//                        if let root = UIApplication.shared.windows.first?.rootViewController {
-//                            interstitial.showAd(from: root)
-//                        }
-//                    }
-//                    .disabled(!interstitial.isAdReady)
-//                    .padding()
-//                    .background(interstitial.isAdReady ? Color.blue : Color.gray)
-//                    .foregroundColor(.white)
-//                    .cornerRadius(10)
+                    //                    Button("显示全屏广告") {
+                    //                        if let root = UIApplication.shared.windows.first?.rootViewController {
+                    //                            interstitial.showAd(from: root)
+                    //                        }
+                    //                    }
+                    //                    .disabled(!interstitial.isAdReady)
+                    //                    .padding()
+                    //                    .background(interstitial.isAdReady ? Color.blue : Color.gray)
+                    //                    .foregroundColor(.white)
+                    //                    .cornerRadius(10)
                 }
                 .padding(.top, 10)
-//                .task{
-//                    await interstitialVM.loadAd()
-//                }
+                //                .task{
+                //                    await interstitialVM.loadAd()
+                //                }
             }
             .task{
                 await interstitialVM.loadAd()

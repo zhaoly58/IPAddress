@@ -12,7 +12,7 @@ struct NotificationView: View {
     
     var body: some View {
         NavigationStack{
-//            ScrollView{
+            ScrollView{
                 VStack(spacing: 20) {
                     Button("请求通知权限") {
                         viewModel.requestAuthorization()
@@ -41,7 +41,7 @@ struct NotificationView: View {
                 .navigationTitle("Push Notification")
                 .padding()
                 
-//            }
+            }
         }
     }
 }

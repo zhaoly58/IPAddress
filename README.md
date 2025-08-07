@@ -1,9 +1,9 @@
 This is an app which contains functions of: 
 * IP address checking
 * Fake API mobile app UI practice
-3, Google AdMob practice
-4, APP icon changing practice
-5, Firebase in-app message practice
-6, Local push notification practice
-7, MVVM architecture demo
-8, General SwiftUI practice
+* Google AdMob practice
+* APP icon changing practice
+* Firebase in-app message practice
+* Local push notification practice
+* MVVM architecture demo
+* General SwiftUI practice

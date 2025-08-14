@@ -59,6 +59,6 @@ struct SettingsViewMain: View {
     }
 }
 
-#Preview {
-    SettingsViewMain()
-}
+//#Preview {
+//    SettingsViewMain()
+//}

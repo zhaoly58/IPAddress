@@ -14,19 +14,19 @@ struct SettingsViewMain: View {
             //                VStack(alignment: .leading) {
             VStack {
                 List {
-                    Section(header: Text("Source Code")){
+                    Section(header: Text("Github")){
                         HStack(){
                             Image(systemName: "link.circle")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 20, height: 20)
-                            Link("Github", destination: URL(string: "https://github.com/zhaoly58/IPAddress#")!)
+                            Link("Source Code", destination: URL(string: "https://github.com/zhaoly58/IPAddress#")!)
                         }
                     }
                     
                     
                     //                    Divider()
-                    Section(header: Text("Contact")){
+                    Section(header: Text("Contact me")){
                         HStack(){
                             Image(systemName: "pencil.and.scribble")
                                 .resizable()
@@ -36,7 +36,7 @@ struct SettingsViewMain: View {
                         }
                     }
                     
-                    Section(header: Text("Version")){
+                    Section(header: Text("App Version")){
                         HStack(){
                             let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
                             Text("v\(appVersion)")
